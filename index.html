@@ -1,83 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schermata di Download - Giochi Pokemon</title>
+    <title>Schermata di Download</title>
+
     <style>
         body {
-            background-color: darkslategrey;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .game {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+            .game:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .game h2 {
+                margin-top: 0;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #000000;
+            }
+
+            .game ul {
+                list-style-type: none;
+                padding: 0;
+                text-align: center;
+            }
+
+            .game li {
+                margin-bottom: 5px;
+            }
+
+            .game a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .game a:hover {
+                    text-decoration: underline;
+                }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+            .game-list li {
+                margin: 5px;
+            }
+
+        .game a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.5s;
+        }
+
+            .game a:hover {
+                color: #ff4500;
+            }
+
+        .blur {
+            filter: blur(5px);
+            transition: filter 0.9s ease;
         }
     </style>
+
 </head>
 <body>
-    <div id="Igen">
-        <h2>Pokemon Red, Blue and Yellow Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - Red Version"><span style="color: red;">Red</span></a></li>
-            <li><a href="LINK" download="Pokemon - Blue Version"><span style="color: blue;">Blue</span></a></li>
-            <li><a href="LINK" download="Pokemon - Yellow Version"><span style="color: yellow;">Yellow</span></a></li>
-        </ul>
+    <div id="container">
+
+        <div class="game">
+            <h2>Red / Blue / Yellow</h2>
+            <ul class="game-list">
+                <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/01%20Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version.srm" download="Pokemon - Red Version" data-sound="charizard_crie">Red</a></li>
+                <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/02%20Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version.srm" download="Pokemon - Blue Version" data-sound="blastoise_crie">Blue</a></li>
+                <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/04%20Pok%C3%A9mon%20-%20Yellow%20Version/Pok%C3%A9mon%20-%20Yellow%20Version/Pok%C3%A9mon%20-%20Yellow%20Version.srm" download="Pokemon - Yellow Version" data-sound="pikachu_crie">Yellow</a></li>
+            </ul>
+        </div>
+
+        <div class="game">
+            <div id="IIgen">
+                <h2>Gold / Silver / Crystal</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - Gold Version" data-sound="hoho_crie">Gold</a></li>
+                    <li><a href="LINK" download="Pokemon - Silver Version" data-sound="lugia_crie">Silver</a></li>
+                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version.srm" download="Pokemon - Crystal Version" data-sound="suicune_crie">Crystal</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="IIIGen">
+                <h2>Ruby / Sapphire / Emerald</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - Ruby Version" data-sound="groudon_crie">Ruby</a></li>
+                    <li><a href="LINK" download="Pokemon - Sapphire Version" data-sound="kyogre_crie">Sapphire</a></li>
+                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/III%20RSE%20%5BGBA%5D/03%20Pok%C3%A9mon%20-%20Emerald%20Version/Pok%C3%A9mon%20-%20Emerald%20Version/Pok%C3%A9mon%20-%20Emerald%20Version.sav" download="Pokemon - Emerald Version" data-sound="rayquaza_crie">Emerald</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="IIIGen2">
+                <h2>FireRed / LeafGreen</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - FireRed Version" data-sound="charizard_crie">FireRed</a></li>
+                    <li><a href="LINK" download="Pokemon - LeafGreen Version" data-sound="venusaur_crie">LeafGreen</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="IVGen">
+                <h2>Diamond / Pearl / Platinum</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - Diamond Version" data-sound="dialga_crie">Diamond</a></li>
+                    <li><a href="LINK" download="Pokemon - Pearl Version" data-sound="palkia_crie">Pearl</a></li>
+                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/IV%20DPPt%20%5BDS%5D/03%20Pok%C3%A9mon%20-%20Platinum%20Version/Pok%C3%A9mon%20-%20Platinum%20Version/Pok%C3%A9mon%20-%20Platinum%20Version.sav" download="Pokemon - Platinum Version" data-sound="giratina_crie">Platinum</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="IVGen2">
+                <h2>HeartGold / SoulSilver</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - HeartGold Version" data-sound="hoho_crie">HeartGold</a></li>
+                    <li><a href="LINK" download="Pokemon - SoulSilver Version" data-sound="lugia_crie">SoulSilver</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="VGen">
+                <h2>Black / White</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon -Black Version" data-sound="reshiram_crie">Black</a></li>
+                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/V%20BWB2W2%20%5BDS%5D/01%20Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version.sav" download="Pokemon - White Version" data-sound="zekrom_crie">White</a></li>
+                    <li><a href="LINK" download="Pokemon -Black 2 Version" data-sound="kyurem-black_crie">Black 2</a></li>
+                    <li><a href="LINK" download="Pokemon - White 2 Version" data-sound="kyurem-white_crie">White 2</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
-    <div id="IIgen">
-        <h2>Pokemon Gold, Silver and Crystal Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - Gold Version"><span style="color: gold;">Gold</span></a></li>
-            <li><a href="LINK" download="Pokemon - Silver Version"><span style="color: silver;">Silver</span></a></li>
-            <li><a href="LINK" download="Pokemon - Crystal Version"><span style="color: cyan;">Crystal</span></a></li>
-        </ul>
-    </div>
+    <script>
+        //Blur
+        const containers = document.querySelectorAll('.game');
+        containers.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                containers.forEach(c => c.classList.add('blur'));
+                container.classList.remove('blur');
+            });
 
-    <div id="IIIGen">
-        <h2>Pokemon Ruby, Sapphire and Emerald Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - Ruby Version">Ruby</a></li>
-            <li><a href="LINK" download="Pokemon - Sapphire Version">Sapphire</a></li>
-            <li><a href="LINK" download="Pokemon - Emerald Version">Emerald</a></li>
-        </ul>
-    </div>
+            container.addEventListener('mouseleave', () => {
+                containers.forEach(c => c.classList.remove('blur'));
+            });
+        });
 
-    <div id="IIIGen2">
-        <h2>Pokemon FireRed and LeafGreen Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - FireRed">FireRed</a></li>
-            <li><a href="LINK" download="Pokemon - LeafGreen">LeafGreen</a></li>
-        </ul>
-    </div>
+        //Cries
+        const audioData = [
+            { id: "charizard_crie", src: "https://play.pokemonshowdown.com/audio/cries/charizard.mp3" },
+            { id: "blastoise_crie", src: "https://play.pokemonshowdown.com/audio/cries/blastoise.mp3" },
+            { id: "pikachu_crie", src: "https://play.pokemonshowdown.com/audio/cries/pikachu.mp3" },
+            { id: "hoho_crie", src: "https://play.pokemonshowdown.com/audio/cries/hooh.mp3" },
+            { id: "lugia_crie", src: "https://play.pokemonshowdown.com/audio/cries/lugia.mp3" },
+            { id: "suicune_crie", src: "https://play.pokemonshowdown.com/audio/cries/suicune.mp3" },
+            { id: "groudon_crie", src: "https://play.pokemonshowdown.com/audio/cries/groudon.mp3" },
+            { id: "kyogre_crie", src: "https://play.pokemonshowdown.com/audio/cries/kyogre.mp3" },
+            { id: "rayquaza_crie", src: "https://play.pokemonshowdown.com/audio/cries/rayquaza.mp3" },
+            { id: "venusaur_crie", src: "https://play.pokemonshowdown.com/audio/cries/venusaur.mp3" },
+            { id: "dialga_crie", src: "https://play.pokemonshowdown.com/audio/cries/dialga.mp3" },
+            { id: "palkia_crie", src: "https://play.pokemonshowdown.com/audio/cries/palkia.mp3" },
+            { id: "giratina_crie", src: "https://play.pokemonshowdown.com/audio/cries/giratina.mp3" },
+            { id: "reshiram_crie", src: "https://play.pokemonshowdown.com/audio/cries/reshiram.mp3" },
+            { id: "zekrom_crie", src: "https://play.pokemonshowdown.com/audio/cries/zekrom.mp3" },
+            { id: "kyurem-black_crie", src: "https://play.pokemonshowdown.com/audio/cries/kyurem-black.mp3" },
+            { id: "kyurem-white_crie", src: "https://play.pokemonshowdown.com/audio/cries/kyurem-white.mp3" }
+        ];
+        function generateAudioElements() {
+            audioData.forEach(sound => {
+                const audioElement = document.createElement("audio");
+                audioElement.id = sound.id;
+                const sourceElement = document.createElement("source");
+                sourceElement.src = sound.src;
+                sourceElement.type = "audio/mp3";
+                audioElement.appendChild(sourceElement);
+                document.body.appendChild(audioElement);
+            });
+        }
+        function playSound(soundId) {
+            const sound = document.getElementById(soundId);
+            const allAudio = document.querySelectorAll('audio');
 
-    <div id="IVGen">
-        <h2>Pokemon Diamond, Pearl and Platinum Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - Diamond Version">Diamond</a></li>
-            <li><a href="LINK" download="Pokemon - Pearl Version">Pearl</a></li>
-            <li><a href="LINK" download="Pokemon - Platinum Version">Platinum</a></li>
-        </ul>
-    </div>
+            allAudio.forEach(audio => {
+                if (audio.id !== soundId) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
 
-    <div id="IVGen2">
-        <h2>Pokemon HeartGold and SoulSilver Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon - HeartGold">HeartGold</a></li>
-            <li><a href="LINK" download="Pokemon - SoulSilver">SoulSilver</a></li>
-        </ul>
-    </div>
-
-    <div id="VGen">
-        <h2>Pokemon Black and White Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon -Black Version">Black</a></li>
-            <li><a href="LINK" download="Pokemon - White Version">White</a></li>
-        </ul>
-    </div>
-
-    <div id="VGen2">
-        <h2>Pokemon Black 2 and White 2 Versions</h2>
-        <ul>
-            <li><a href="LINK" download="Pokemon -Black 2 Version">Black</a></li>
-            <li><a href="LINK" download="Pokemon - White Version">White</a></li>
-        </ul>
-    </div>
+            if (sound) {
+                sound.play();
+            }
+        }
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const soundId = link.getAttribute('data-sound');
+                if (soundId) {
+                    playSound(soundId);
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            generateAudioElements();
+        });
+    </script>
 
 </body>
 </html>
