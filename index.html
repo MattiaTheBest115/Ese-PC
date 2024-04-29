@@ -6,12 +6,24 @@
     <title>Ese-PC</title>
 
     <style>
+        /* Variabili */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #ff4500;
+        }
+
+        /* Reset CSS */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            background-image: url('https://w.wallhaven.cc/full/ne/wallhaven-neoxo8.png');
             margin: 0;
             padding: 0;
+        }
+
+        /* Layout */
+        body {
+            background-color: #f0f0f0;
+            background-image: url('https://wallpaperswide.com/download/colors_contrast-wallpaper-1920x1080.jpg');
+            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAz1AAARJTQAA8v8AAJGZAADEzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAASIhAAAAAAAAAAAAAAAAABIiIQAAAAAAAAAAAAAAAAASIiEAAAAAAAAAAAAAAAAEVSIRAAAAAAAAAAAAAAAABDVUAAAAAAAAAAAAAAAAAEMzVAAAAAAAAAAAAAAAAAQzMzVAAAAAAAAAAAAABEAEMzMzVAAAAAAAAAAAAEVUBDM0REQAAAAAAAAAAARTNURDNAAAAAAAAAAAAAAEMzNVVTNAAAAAAAAAAAAAQzMzMzMzQAAAAAAAAAAABDMzMzMzM0AAAAAAAAAAAAQzMzMzMzM0AAAAAAAAAAAEMzMzMzMzNAAAAAAAAAAABDMzMzMzMzQAAAAAAAAAAAREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////H////h////wf///4H///+B////Af///wf///4H///8A///zAH//4QB//8AH///AA///gAP//wAD//8AAf//AAH//wAB//8AAf///////w=='), auto;
         }
 
         #container {
@@ -19,34 +31,48 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
+            overflow: hidden;
         }
 
+        /* Box Game */
         .game {
-            background-color: #fff;
+            position: relative; 
+            display: inline-block; 
+            background-color: papayawhip;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
         }
 
             .game:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
                 transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             }
 
-            .game h2 {
-                margin-top: 0;
-                margin-bottom: 10px;
-                text-align: center;
-                color: #000000;
+            .game::after {
+                content: '';
+                position: absolute;
+                top: -1px; 
+                left: -1px;  
+                right: -1px; 
+                bottom: -1px; 
+                border-radius: inherit;  
+                border: 1px solid transparent;
+                transition: border-color 0.5s ease;
+                z-index: -1;
             }
 
+            .game:hover::after {
+                border-color: orangered;
+            }
+
+            .game h2,
             .game h3 {
                 margin-top: 0;
                 margin-bottom: 10px;
                 text-align: center;
-                color: #000000;
+                color: #000;
             }
 
             .game ul {
@@ -61,34 +87,17 @@
 
             .game a {
                 text-decoration: none;
-                color: #007bff;
-                transition: color 0.5s, transform 0.3s ease;
+                color: var(--primary-color);
+                transition: color 0.5s;
+                font-size: 16px; 
+                display: inline-block;
             }
 
                 .game a:hover {
                     text-decoration: underline;
+                    color: var(--secondary-color);
+                    transform: scale(1.1); 
                 }
-
-        .game-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-            .game-list li {
-                margin: 5px;
-            }
-
-        .game a {
-            text-decoration: none;
-            color: #007bff;
-            transition: color 0.5s;
-        }
-
-            .game a:hover {
-                color: #ff4500;
-                transform: scale(1.1);
-            }
 
         .blur {
             filter: blur(5px);
@@ -97,26 +106,23 @@
 
         h1 {
             text-align: center;
-            font-size: 2em; 
-            font-weight: bold; 
-            color: #333; 
-            margin-bottom: 10px; 
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
         }
     </style>
-
 </head>
-<body>
 
+<body>
     <h1>Pokémon</h1>
     <div id="container">
+
         <div class="game">
             <div id="Igen">
                 <h2>Red / Blue / Yellow</h2>
                 <ul class="game-list">
-                    <li>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/01%20Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version.sav" download="Pokemon - Red Version" data-sound="charizard_crie" style="color: green;">Red</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/01%20Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version%20%5BGlitch%20Pok%C3%A9mon%5D/Pok%C3%A9mon%20-%20Red%20Version.sav" download="Pokemon - Red Version [GlitchMon]" data-sound="charizard_crie" style="color: green;">[GlitchMon]</a>
-                    </li>
+                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/01%20Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version.sav" download="Pokemon - Red Version" data-sound="charizard_crie" style="color: green;">Red</a></li>
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/02%20Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version.sav" download="Pokemon - Blue Version" data-sound="blastoise_crie" style="color: green;">Blue</a></li>
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/04%20Pok%C3%A9mon%20-%20Yellow%20Version/Pok%C3%A9mon%20-%20Yellow%20Version/Pok%C3%A9mon%20-%20Yellow%20Version.sav" download="Pokemon - Yellow Version" data-sound="pikachu_crie" style="color: green;">Yellow</a></li>
                 </ul>
@@ -129,15 +135,15 @@
                 <ul class="game-list">
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version.sav" download="Pokemon - Gold Version" data-sound="hoho_crie" style="color: green;">Gold</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Gold Version [VC]" data-sound="hoho_crie" style="color: green;">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Gold Version [VC]" data-sound="hoho_crie" style="color: blueviolet;">[VC]</a>
                     </li>
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version.sav" download="Pokemon - Silver Version" data-sound="lugia_crie" style="color: green;">Silver</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Silver Version [VC]" data-sound="lugia_crie" style="color: green;">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Silver Version [VC]" data-sound="lugia_crie" style="color: blueviolet; ">[VC]</a>
                     </li>
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version.sav" download="Pokemon - Crystal Version" data-sound="suicune_crie" style="color: green;">Crystal</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Crystal Version [VC]" data-sound="suicune_crie" style="color: green;">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Crystal Version [VC]" data-sound="suicune_crie" style="color: blueviolet; ">[VC]</a>
                     </li>
                 </ul>
             </div>
@@ -189,10 +195,14 @@
             <div id="VGen">
                 <h2>Black / White</h2>
                 <ul class="game-list">
-                    <li><a href="LINK" download="Pokemon - Black Version" data-sound="reshiram_crie">Black</a></li>
-                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/V%20BWB2W2%20%5BDS%5D/01%20Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version.sav" download="Pokemon - White Version" data-sound="zekrom_crie" style="color: green;">White</a></li>
-                    <li><a href="LINK" download="Pokemon - Black 2 Version" data-sound="kyurem-black_crie">Black 2</a></li>
-                    <li><a href="LINK" download="Pokemon - White 2 Version" data-sound="kyurem-white_crie">White 2</a></li>
+                    <li>
+                        <a href="LINK" download="Pokemon - Black Version" data-sound="reshiram_crie">Black</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/V%20BWB2W2%20%5BDS%5D/01%20Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version/Pok%C3%A9mon%20-%20White%20Version.sav" download="Pokemon - White Version" data-sound="zekrom_crie" style="color: green;">White</a>
+                    </li>
+                    <li>
+                        <a href="LINK" download="Pokemon - Black 2 Version" data-sound="kyurem-black_crie">Black 2</a>
+                        <a href="LINK" download="Pokemon - White 2 Version" data-sound="kyurem-white_crie">White 2</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -211,8 +221,8 @@
             <div id="VI2">
                 <h3>Omega Ruby / Alpha Sapphire</h3>
                 <ul class="game-list">
-                    <li><a href="LINK" download="Pokemon - Omega Ruby" data-sound="groudon-primal_crie">X</a></li>
-                    <li><a href="LINK" download="Pokemon - Alpha Sapphire" data-sound="kyogre-primal_crie">Y</a></li>
+                    <li><a href="LINK" download="Pokemon - Omega Ruby" data-sound="groudon-primal_crie">Omega Ruby</a></li>
+                    <li><a href="LINK" download="Pokemon - Alpha Sapphire" data-sound="kyogre-primal_crie">Alpha Sapphire</a></li>
                 </ul>
             </div>
         </div>
@@ -221,10 +231,24 @@
             <div id="VII">
                 <h2>Sun / Moon</h2>
                 <ul class="game-list">
-                    <li><a href="LINK" download="Pokemon - Sun" data-sound="solgaleo_crie">Sun</a></li>
-                    <li><a href="LINK" download="Pokemon - Moon" data-sound="lunala_crie">Moon</a></li>
-                    <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/VII%20SMUSUM%20%5B3DS%5D/03%20Pok%C3%A9mon%20-%20Ultra%20Sun/Pok%C3%A9mon%20-%20Ultra%20Sun/main" download="Pokemon - UltraSun" data-sound="necrozma-duskmane_crie" style="color: green;">Ultra Sun</a></li>
-                    <li><a href="LINK" download="Pokemon - UltraMoon" data-sound="necrozma-dawnwings_crie">Ultra Moon</a></li>
+                    <li>
+                        <a href="LINK" download="Pokemon - Sun" data-sound="solgaleo_crie">Sun</a>
+                        <a href="LINK" download="Pokemon - Moon" data-sound="lunala_crie">Moon</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/VII%20SMUSUM%20%5B3DS%5D/03%20Pok%C3%A9mon%20-%20Ultra%20Sun/Pok%C3%A9mon%20-%20Ultra%20Sun/main" download="Pokemon - UltraSun" data-sound="necrozma-duskmane_crie" style="color: green;">Ultra Sun</a>
+                        <a href="LINK" download="Pokemon - UltraMoon" data-sound="necrozma-dawnwings_crie">Ultra Moon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="VII2">
+                <h2>Let's Go</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokémon - Let's Go, Pikachu" data-sound="pikachu_crie">Pikachu</a></li>
+                    <li><a href="LINK" download="Pokémon - Let's Go, Eevee" data-sound="eevee_crie">Eevee</a></li>
                 </ul>
             </div>
         </div>
@@ -240,6 +264,25 @@
         </div>
 
         <div class="game">
+            <div id="VIII2">
+                <h2>Sword / Shield</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokemon - Brilliant Diamond" data-sound="dialga_crie">Brilliant Diamond</a></li>
+                    <li><a href="LINK" download="Pokemon - Shining Pearl" data-sound="palkia_crie">Shining Pearl</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="VIII3">
+                <h2>Legends</h2>
+                <ul class="game-list">
+                    <li><a href="LINK" download="Pokémon - Legends: Arceus" data-sound="arceus_crie">Arceus</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game">
             <div id="IX">
                 <h2>Scarlet / Violet</h2>
                 <ul class="game-list">
@@ -248,10 +291,12 @@
                 </ul>
             </div>
         </div>
+
     </div>
 
     <h1>Mario</h1>
     <div id="container">
+
         <div class="game">
             <div id="Mario Kart">
                 <h2>Mario Kart</h2>
@@ -274,6 +319,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
 
     <script>
@@ -319,6 +365,9 @@
             { id: "necrozma-dawnwings_crie", src: "https://play.pokemonshowdown.com/audio/cries/necrozma-dawnwings.mp3" },
             { id: "zamazenta_crie", src: "https://play.pokemonshowdown.com/audio/cries/zamazenta.mp3" },
             { id: "zacian_crie", src: "https://play.pokemonshowdown.com/audio/cries/zacian.mp3" },
+            { id: "pikachu_crie", src: "https://play.pokemonshowdown.com/audio/cries/pikachu.mp3" },
+            { id: "eevee_crie", src: "https://play.pokemonshowdown.com/audio/cries/eevee.mp3" },
+            { id: "arceus_crie", src: "https://play.pokemonshowdown.com/audio/cries/arceus.mp3" },
             { id: "koraidon_crie", src: "https://play.pokemonshowdown.com/audio/cries/koraidon.mp3" },
             { id: "miraidon_crie", src: "https://play.pokemonshowdown.com/audio/cries/miraidon.mp3" }
         ];
@@ -362,6 +411,5 @@
             generateAudioElements();
         });
     </script>
-
 </body>
 </html>
