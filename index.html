@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Ese-PC</title>
 
     <style>
-        /* Variabili */
         :root {
             --primary-color: #007bff;
             --secondary-color: #ff4500;
         }
 
-        /* Reset CSS */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        /* Layout */
-        body {
             background-color: #f0f0f0;
             background-image: url('https://tinyurl.com/5c5dcpj8');
             cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAz1AAARJTQAA8v8AAJGZAADEzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAASIhAAAAAAAAAAAAAAAAABIiIQAAAAAAAAAAAAAAAAASIiEAAAAAAAAAAAAAAAAEVSIRAAAAAAAAAAAAAAAABDVUAAAAAAAAAAAAAAAAAEMzVAAAAAAAAAAAAAAAAAQzMzVAAAAAAAAAAAAABEAEMzMzVAAAAAAAAAAAAEVUBDM0REQAAAAAAAAAAARTNURDNAAAAAAAAAAAAAAEMzNVVTNAAAAAAAAAAAAAQzMzMzMzQAAAAAAAAAAABDMzMzMzM0AAAAAAAAAAAAQzMzMzMzM0AAAAAAAAAAAEMzMzMzMzNAAAAAAAAAAABDMzMzMzMzQAAAAAAAAAAAREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////H////h////wf///4H///+B////Af///wf///4H///8A///zAH//4QB//8AH///AA///gAP//wAD//8AAf//AAH//wAB//8AAf///////w=='), auto;
@@ -34,10 +31,9 @@
             overflow: hidden;
         }
 
-        /* Box Game */
         .game {
-            position: relative; 
-            display: inline-block; 
+            position: relative;
+            display: inline-block;
             background-color: papayawhip;
             border-radius: 5px;
             padding: 20px;
@@ -53,18 +49,18 @@
             .game::after {
                 content: '';
                 position: absolute;
-                top: -1px; 
-                left: -1px;  
-                right: -1px; 
-                bottom: -1px; 
-                border-radius: inherit;  
+                top: -1px;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                border-radius: inherit;
                 border: 1px solid transparent;
                 transition: border-color 0.5s ease;
                 z-index: -1;
             }
 
             .game:hover::after {
-                border-color: orangered;
+                border-color: red;
             }
 
             .game h2,
@@ -89,14 +85,14 @@
                 text-decoration: none;
                 color: var(--primary-color);
                 transition: color 0.5s;
-                font-size: 16px; 
+                font-size: 16px;
                 display: inline-block;
             }
 
                 .game a:hover {
                     text-decoration: underline;
                     color: var(--secondary-color);
-                    transform: scale(1.1); 
+                    transform: scale(1.1);
                 }
 
         .blur {
@@ -104,14 +100,29 @@
             transition: filter 0.9s ease;
         }
 
+            .blur h1, .blur h2, .blur h3 {
+                filter: blur(5px);
+            }
+
         h1 {
+            font-family: 'Montserrat', sans-serif;
             text-align: center;
-            font-size: 2em;
+            font-size: 4em;
             font-weight: bold;
-            color: #fff;
-            margin-bottom: 10px;
+            color: #000;
+            margin-bottom: 1px;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+        }
+
+        h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
         }
     </style>
+
 </head>
 
 <body>
@@ -120,7 +131,7 @@
 
         <div class="game">
             <div id="Igen">
-                <h2>Red / Blue / Yellow</h2>
+                <h3>Red / Blue / Yellow</h3>
                 <ul class="game-list">
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/01%20Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version/Pok%C3%A9mon%20-%20Red%20Version.sav" download="Pokemon - Red Version" data-sound="charizard_crie" style="color: green;">Red</a></li>
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/I%20RBY%20%5BGB%5D/02%20Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version/Pok%C3%A9mon%20-%20Blue%20Version.sav" download="Pokemon - Blue Version" data-sound="blastoise_crie" style="color: green;">Blue</a></li>
@@ -131,7 +142,7 @@
 
         <div class="game">
             <div id="IIgen">
-                <h2>Gold / Silver / Crystal</h2>
+                <h3>Gold / Silver / Crystal</h3>
                 <ul class="game-list">
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version.sav" download="Pokemon - Gold Version" data-sound="hoho_crie" style="color: green;">Gold</a>
@@ -151,7 +162,7 @@
 
         <div class="game">
             <div id="IIIGen">
-                <h2>Ruby / Sapphire / Emerald</h2>
+                <h3>Ruby / Sapphire / Emerald</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - Ruby Version" data-sound="groudon_crie">Ruby</a></li>
                     <li><a href="LINK" download="Pokemon - Sapphire Version" data-sound="kyogre_crie">Sapphire</a></li>
@@ -162,7 +173,7 @@
 
         <div class="game">
             <div id="IIIGen2">
-                <h2>FireRed / LeafGreen</h2>
+                <h3>FireRed / LeafGreen</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - FireRed Version" data-sound="charizard_crie">FireRed</a></li>
                     <li><a href="LINK" download="Pokemon - LeafGreen Version" data-sound="venusaur_crie">LeafGreen</a></li>
@@ -172,7 +183,7 @@
 
         <div class="game">
             <div id="IVGen">
-                <h2>Diamond / Pearl / Platinum</h2>
+                <h3>Diamond / Pearl / Platinum</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - Diamond Version" data-sound="dialga_crie">Diamond</a></li>
                     <li><a href="LINK" download="Pokemon - Pearl Version" data-sound="palkia_crie">Pearl</a></li>
@@ -183,7 +194,7 @@
 
         <div class="game">
             <div id="IVGen2">
-                <h2>HeartGold / SoulSilver</h2>
+                <h3>HeartGold / SoulSilver</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - HeartGold Version" data-sound="hoho_crie">HeartGold</a></li>
                     <li><a href="LINK" download="Pokemon - SoulSilver Version" data-sound="lugia_crie">SoulSilver</a></li>
@@ -193,7 +204,7 @@
 
         <div class="game">
             <div id="VGen">
-                <h2>Black / White</h2>
+                <h3>Black / White</h3>
                 <ul class="game-list">
                     <li>
                         <a href="LINK" download="Pokemon - Black Version" data-sound="reshiram_crie">Black</a>
@@ -209,7 +220,7 @@
 
         <div class="game">
             <div id="VI">
-                <h2>X / Y</h2>
+                <h3>X / Y</h3>
                 <ul class="game-list">
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/VI%20XY%20%5B3DS%5D/01%20Pok%C3%A9mon%20-%20X/Pok%C3%A9mon%20-%20X/main" download="Pokemon - X" data-sound="xerneas_crie" style="color: green;">X</a></li>
                     <li><a href="LINK" download="Pokemon - Y" data-sound="yveltal_crie">Y</a></li>
@@ -229,7 +240,7 @@
 
         <div class="game">
             <div id="VII">
-                <h2>Sun / Moon</h2>
+                <h3>Sun / Moon</h3>
                 <ul class="game-list">
                     <li>
                         <a href="LINK" download="Pokemon - Sun" data-sound="solgaleo_crie">Sun</a>
@@ -245,7 +256,7 @@
 
         <div class="game">
             <div id="VII2">
-                <h2>Let's Go</h2>
+                <h3>Let's Go</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokémon - Let's Go, Pikachu" data-sound="pikachu_crie">Pikachu</a></li>
                     <li><a href="LINK" download="Pokémon - Let's Go, Eevee" data-sound="eevee_crie">Eevee</a></li>
@@ -255,7 +266,7 @@
 
         <div class="game">
             <div id="VIII">
-                <h2>Sword / Shield</h2>
+                <h3>Sword / Shield</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - Sword" data-sound="zamazenta_crie">Sword</a></li>
                     <li><a href="LINK" download="Pokemon - Shield" data-sound="zacian_crie">Shield</a></li>
@@ -265,7 +276,7 @@
 
         <div class="game">
             <div id="VIII2">
-                <h2>Sword / Shield</h2>
+                <h3>Brilliant Diamond / Shining Pearl</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokemon - Brilliant Diamond" data-sound="dialga_crie">Brilliant Diamond</a></li>
                     <li><a href="LINK" download="Pokemon - Shining Pearl" data-sound="palkia_crie">Shining Pearl</a></li>
@@ -275,7 +286,7 @@
 
         <div class="game">
             <div id="VIII3">
-                <h2>Legends</h2>
+                <h3>Legends</h3>
                 <ul class="game-list">
                     <li><a href="LINK" download="Pokémon - Legends: Arceus" data-sound="arceus_crie">Arceus</a></li>
                 </ul>
@@ -284,7 +295,7 @@
 
         <div class="game">
             <div id="IX">
-                <h2>Scarlet / Violet</h2>
+                <h3>Scarlet / Violet</h3>
                 <ul class="game-list">
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/XI%20SV%20%5BSwitch%5D/01%20Pok%C3%A9mon%20-%20Scarlet/Pok%C3%A9mon%20-%20Scarlet/main" download="Pokemon - Scarlet" data-sound="koraidon_crie" style="color: green;">Scarlet</a></li>
                     <li><a href="LINK" download="Pokemon - Violet" data-sound="miraidon_crie">Violet</a></li>
@@ -299,7 +310,7 @@
 
         <div class="game">
             <div id="Mario Kart">
-                <h2>Mario Kart</h2>
+                <h3>Mario Kart</h3>
                 <ul class="game-list">
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/II%20-%20Mario/I%20-%20Mario%20Kart/Mario%20Kart%20DS.zip" download="Mario Kart DS" style="color: green;">Mario Kart DS</a></li>
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/II%20-%20Mario/I%20-%20Mario%20Kart/Mario%20Kart%20Wii.zip" download="Mario Kart Wii" style="color: green;">Mario Kart Wii</a></li>
@@ -311,7 +322,7 @@
 
         <div class="game">
             <div id="Mario Bros">
-                <h2>Mario Bros</h2>
+                <h3>Mario Bros</h3>
                 <ul class="game-list">
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/II%20-%20Mario/II%20-%20Mario%20Bros/New%20Super%20Mario%20Bros%202.zip" download="New Super Mario Bros 2" style="color: green;">New Super Mario Bros 2</a></li>
                     <li><a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/II%20-%20Mario/II%20-%20Mario%20Bros/Newer%20Super%20Mario%20Bros.%20DS.zip" download="Newer Super Mario Bros. DS" style="color: green;">Newer Super Mario Bros. DS</a></li>
