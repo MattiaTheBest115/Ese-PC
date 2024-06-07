@@ -20,7 +20,6 @@
             padding: 0;
             background-color: #f0f0f0;
             background-image: url('https://tinyurl.com/5c5dcpj8');
-            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAz1AAARJTQAA8v8AAJGZAADEzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAASIhAAAAAAAAAAAAAAAAABIiIQAAAAAAAAAAAAAAAAASIiEAAAAAAAAAAAAAAAAEVSIRAAAAAAAAAAAAAAAABDVUAAAAAAAAAAAAAAAAAEMzVAAAAAAAAAAAAAAAAAQzMzVAAAAAAAAAAAAABEAEMzMzVAAAAAAAAAAAAEVUBDM0REQAAAAAAAAAAARTNURDNAAAAAAAAAAAAAAEMzNVVTNAAAAAAAAAAAAAQzMzMzMzQAAAAAAAAAAABDMzMzMzM0AAAAAAAAAAAAQzMzMzMzM0AAAAAAAAAAAEMzMzMzMzNAAAAAAAAAAABDMzMzMzMzQAAAAAAAAAAAREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////H////h////wf///4H///+B////Af///wf///4H///8A///zAH//4QB//8AH///AA///gAP//wAD//8AAf//AAH//wAB//8AAf///////w=='), auto;
         }
 
         #container {
@@ -121,6 +120,37 @@
             color: #000;
             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
         }
+
+        .VirtualConsole {
+            position: relative;
+            display: inline-block;
+        }
+
+        .VirtualConsole_text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transform: translateY(10px) scale(0.8);  
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            pointer-events: none; 
+        }
+
+        .VirtualConsole:hover .VirtualConsole_text {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0) scale(1); 
+            background-color: #444;
+        }
     </style>
 
 </head>
@@ -146,15 +176,24 @@
                 <ul class="game-list">
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version.sav" download="Pokemon - Gold Version" data-sound="hoho_crie" style="color: green;">Gold</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Gold Version [VC]" data-sound="hoho_crie" style="color: blueviolet;">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/01%20Pok%C3%A9mon%20-%20Gold%20Version/Pok%C3%A9mon%20-%20Gold%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Gold Version [VC]" data-sound="hoho_crie" style="color: blueviolet;" class="VirtualConsole">
+                            [VC]
+                            <span class="VirtualConsole_text">Virtual Console</span>
+                        </a>
                     </li>
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version.sav" download="Pokemon - Silver Version" data-sound="lugia_crie" style="color: green;">Silver</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Silver Version [VC]" data-sound="lugia_crie" style="color: blueviolet; ">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/02%20Pok%C3%A9mon%20-%20Silver%20Version/Pok%C3%A9mon%20-%20Silver%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Silver Version [VC]" data-sound="lugia_crie" style="color: blueviolet;" class="VirtualConsole">
+                            [VC]
+                            <span class="VirtualConsole_text">Virtual Console</span>
+                        </a>
                     </li>
                     <li>
                         <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version.sav" download="Pokemon - Crystal Version" data-sound="suicune_crie" style="color: green;">Crystal</a>
-                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Crystal Version [VC]" data-sound="suicune_crie" style="color: blueviolet; ">[VC]</a>
+                        <a href="https://github.com/MattiaTheBest115/Ese-PC/raw/master/SAV/I%20-%20Pok%C3%A9mon/I%20-%20Main/II%20GSC%20%5BGBC%5D/03%20Pok%C3%A9mon%20-%20Crystal%20Version/Pok%C3%A9mon%20-%20Crystal%20Version%20%5BVC%5D/sav.dat" download="Pokemon - Crystal Version [VC]" data-sound="suicune_crie" style="color: blueviolet;" class="VirtualConsole">
+                            [VC]
+                            <span class="VirtualConsole_text">Virtual Console</span>
+                        </a>
                     </li>
                 </ul>
             </div>
